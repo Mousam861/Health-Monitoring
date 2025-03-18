@@ -1,0 +1,417 @@
+<html lang="en">
+
+<head>
+    <title>Resultr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Favicon-->
+    <link type="image/png" rel="icon" href="\static\images\icons8-heart-96.png">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <!--Bootstrap-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="../static/result.css">
+</head>
+
+<body>
+    <div class="page1">
+        <!-- Nav Bar -->
+
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="{{url_for('index')}}"><img class="nav-bar-image"
+                    src="../static/images/logo.jpg" alt="healthcare-image" style="margin-right:10px"> Diabetes
+                prediction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{url_for('index')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pred" href="{{url_for('predict')}}">Predict</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                <a class="nav-link" href="{{url_for('counsel')}}">Counsel</a>
+                </li> -->
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="container row">
+            <h1>RESULT</h1>
+
+            <div class="container-one col-lg-6">
+
+                <img src="../static/images/medicine-cartoon-png-favpng-WpFmTcPH56PXftTpUGb8gTPr8-removebg-preview.jpg"" class="
+                    img-fluid" alt="bmi image" style="vertical-align: bottom;">
+
+            </div>
+            <div class="container-two col-lg-6">
+
+                <h2>
+                    {{prediction_text}}
+                </h2>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    
+
+    <div class="page2">
+    <div class="recommendations">
+        <h2>Diabetes Management Recommendations</h2>
+        <div class="flex-container">
+            <div class="do-section">
+                <h3>What To Do</h3>
+                <ul>
+                    <li>Monitor blood glucose levels regularly as advised by your doctor</li>
+                    <li>Follow a balanced diabetic diet plan with controlled carbohydrate intake</li>
+                    <li>Exercise regularly - aim for 150 minutes of moderate activity per week</li>
+                    <li>Take insulin or diabetes medications exactly as prescribed</li>
+                    <li>Check your feet daily for cuts, blisters or swelling</li>
+                    <li>Maintain a healthy weight through diet and exercise</li>
+                    <li>Stay well-hydrated with water and sugar-free beverages</li>
+                    <li>Get regular A1C tests and diabetes check-ups</li>
+                    <li>Keep a diabetes management diary or use tracking apps</li>
+                </ul>
+            </div>
+
+            <div class="dont-section">
+                <h3>What To Avoid</h3>
+                <ul>
+                    <li>Sugary foods and drinks including regular soda</li>
+                    <li>Skipping meals or going too long without eating</li>
+                    <li>Large portions of starchy foods like white rice and bread</li>
+                    <li>Fruit juices and sweetened beverages</li>
+                    <li>Processed snacks and baked goods</li>
+                    <li>Foods high in saturated and trans fats</li>
+                    <li>Alcohol on an empty stomach</li>
+                    <li>Being inactive for long periods</li>
+                    <li>Ignoring blood sugar monitoring</li>
+                </ul>
+            </div>
+        </div>
+
+        <style>
+            .flex-container {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+
+            .do-section, .dont-section {
+                flex: 1;
+                padding: 20px;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            @media (max-width: 768px) {
+                .flex-container {
+                    flex-direction: column;
+                }
+            }
+        </style>
+       
+
+        <div class="emergency-note">
+            <h3>Important Note</h3>
+            <p>If you experience any of these diabetes emergency signs, seek immediate medical attention:</p>
+            <ul>
+                <li>Very high blood sugar (over 250 mg/dL) with severe thirst and frequent urination</li>
+                <li>Difficulty breathing or shortness of breath</li>
+                <li>Fruity-smelling breath and confusion (signs of ketoacidosis)</li>
+                <li>Severe drowsiness or lethargy</li>
+                <li>Nausea and vomiting that won't stop</li>
+            </ul>
+        </div>
+        <div class="doctor-consultation">
+            <h3>Consult with Diabetes Specialists</h3>
+            <div class="consultation-links">
+                <h4>Find Diabetes Doctors in India</h4>
+                <ul>
+                    <li><a href="https://www.practo.com/search/doctors?speciality=Diabetologist" target="_blank">Find Diabetologists on Practo</a></li>
+                    <li><a href="https://www.apollo247.com/specialties/diabetology" target="_blank">Apollo Hospitals Diabetes Care</a></li>
+                    <li><a href="https://www.medanta.org/doctors/diabetes-endocrinology" target="_blank">Medanta Diabetes Institute</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <style>
+            .doctor-consultation {
+                background: white;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            .doctor-consultation h3 {
+                color: #3D99D4;
+                margin-bottom: 15px;
+            }
+
+            .doctor-consultation h4 {
+                color: #333;
+                margin: 10px 0;
+            }
+
+            .consultation-links a {
+                color: #3D99D4;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .consultation-links a:hover {
+                color: #2980b9;
+                text-decoration: underline;
+            }
+
+            .consultation-links ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+
+            .consultation-links li {
+                margin: 10px 0;
+            }
+        </style>
+
+        <div class="resources-section">
+            <h3>Medical Resources & Emergency Contacts</h3>
+            
+            <div class="medical-resources">
+                <h4>Helpful Resources</h4>
+                <ul>
+                    <li><a href="https://www.diabetes.org/" target="_blank">American Diabetes Association</a></li>
+                    <li><a href="https://www.idf.org/" target="_blank">International Diabetes Federation</a></li>
+                    <li><a href="https://www.niddk.nih.gov/health-information/diabetes" target="_blank">National Institute of Diabetes and Digestive and Kidney Diseases</a></li>
+                </ul>
+            </div>
+
+            <div class="emergency-contacts">
+                <h4>Emergency Contact Numbers</h4>
+                <ul>
+                    <li><strong>Emergency Services:</strong> 911</li>
+                    <li><strong>Diabetes Helpline:</strong> 1-800-342-2383</li>
+                    <li><strong>National Emergency Hotline:</strong> 1-800-222-1222</li>
+                </ul>
+            </div>
+
+            <div class="nearest-hospitals">
+                <h4>Find Nearest Hospitals</h4>
+                <div id="map"></div>
+                <button onclick="findNearestHospitals()" class="hospital-btn">Show Nearby Hospitals</button>
+            </div>
+        </div>
+
+        <style>
+            .resources-section {
+                background: white;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+
+            .resources-section h3 {
+                color: #3D99D4;
+                margin-bottom: 20px;
+            }
+
+            .resources-section h4 {
+                color: #333;
+                margin: 15px 0;
+            }
+
+            .medical-resources a {
+                color: #3D99D4;
+                text-decoration: none;
+            }
+
+            .medical-resources a:hover {
+                text-decoration: underline;
+            }
+
+            .emergency-contacts {
+                background: #fff3cd;
+                padding: 15px;
+                border-radius: 5px;
+                margin: 15px 0;
+            }
+
+            #map {
+                height: 300px;
+                width: 100%;
+                margin: 15px 0;
+                border-radius: 8px;
+            }
+
+            .hospital-btn {
+                background: #3D99D4;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            .hospital-btn:hover {
+                background: #2980b9;
+            }
+        </style>
+
+        <script>
+            let map;
+            let service;
+            let infowindow;
+
+            function initMap() {
+                infowindow = new google.maps.InfoWindow();
+                map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 14
+                });
+            }
+
+            function findNearestHospitals() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(position => {
+                        const userLocation = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+
+                        map.setCenter(userLocation);
+
+                        const request = {
+                            location: userLocation,
+                            radius: '5000',
+                            type: ['hospital']
+                        };
+
+                        service = new google.maps.places.PlacesService(map);
+                        service.nearbySearch(request, callback);
+                    });
+                }
+            }
+
+            function callback(results, status) {
+                if (status == google.maps.places.PlacesServiceStatus.OK) {
+                    for (let i = 0; i < results.length; i++) {
+                        createMarker(results[i]);
+                    }
+                }
+            }
+
+            function createMarker(place) {
+                const marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+
+                google.maps.event.addListener(marker, "click", () => {
+                    infowindow.setContent(place.name);
+                    infowindow.open(map, marker);
+                });
+            }
+        </script>
+
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
+        </script>
+    </div>
+
+    <style>
+        .recommendations {
+            padding: 40px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .recommendations h2 {
+            color: #3D99D4;
+            text-align: center;
+            margin-bottom: 30px;font-weight: bold;
+        }
+
+        .recommendations h3 {
+            color: #333;
+            margin: 20px 0;font-weight: bold;
+        }
+
+        .do-section, .dont-section, .emergency-note {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .do-section h3 {
+            color: #28a745;font-weight: bold;
+        }
+
+        .dont-section h3 {
+            color: #dc3545;font-weight: bold;
+        }
+
+        .emergency-note h3 {
+            color: #ffc107;font-weight: bold;
+        }
+
+        .recommendations ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .recommendations li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .recommendations li:before {
+            content: "•";
+            color: #3D99D4;
+            font-weight: bold;
+            position: absolute;
+            left: 10px;
+        }
+
+        .emergency-note ul li {
+            color: #721c24;
+        }
+    </style>
+    </div>
+
+
+
+
+    <!--Script-->
+    <script src="../static/bmijs.js" charset="utf-8"></script>
+</body>
+
+</html>

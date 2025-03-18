@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15em;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+.card-registration .select-arrow
+{
+    top: 13px;
+}
+.py-5{
+    padding-top: 1.4rem !important;
+}
+/* Navigation bar */
+.nav-bar-image{
+    width : 8%;
+    border-radius: 50%;
+}
+.navbar  {
+    padding-top: 2rem;
+    padding-left: 4rem ;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+}
+.navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.nav-item {
+    padding : 0 18px 0 18px;
+}
+.nav-link {
+    font-size : 1.2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+
+select{
+    border-radius: 4px;
+    width:219px;
+    height: 45px;
+    color: grey;
+    border: 0.5px solid lightgrey;
+  }
+  
+
+
+.form-outlinen select{
+    width: 461px;
+    height: 45px;
+    padding:6px 4px 9px 13px;
+    font-size:17px;
+}
+section{
+    background-color: #D9E9D2;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+h3{
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+body{
+    margin:0;
+}
+.btn{
+    background-color: rgb(94, 192, 76);
+    color: white;
+    transition-duration: .4s;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+}
+  
+.btn:hover{
+    background-color: #aa47d8;
+    color:#f3ebeb;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Sub div 1 */
+.good-one{
+    width:90%;
+    display:flex;
+    float:left;
+}
+
+/* Sub div 2*/
+.good-two{
+    width:10%;
+    display:flex;
+    float:right;
+}
+
+
+/* CSS for mobile devices */
+@media (max-width:640px){
+   
+    .py-2 {
+        display: flex;
+    }
+    .py-5{
+        padding-top: 0rem !important;
+    }
+    .py-5 {
+        padding-bottom: 1.5rem!important;
+    }
+    .navbar {
+        padding-bottom: 0rem;
+        padding-top: 0.7rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        text-align: center;
+        color: rgba(0,0,0,.55);
+    }
+    .nav-bar-image {
+        width: 23%;
+    }
+    .mb-5 {
+        margin-bottom: 2rem!important;
+    }
+    h3{
+        padding-bottom: 0px;
+    }
+    .navbar-light .navbar-brand {
+        width: 50%;
+    }
+}
+
+.login {
+	position: relative;
+	max-width: 400px;
+	margin: 40px auto;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.login h1 {
+	margin-bottom: 30px;
+	color: #333;
+	text-align: center;
+	font-size: 28px;
+}
+
+input {
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.3s ease;
+}
+
+input:focus {
+	border-color: #28e6a3;
+	outline: none;
+}
+
+.btn {
+	width: 100%;
+	padding: 12px;
+	background: #28e6a3;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.btn:hover {
+	background: #20c88d;
+}
+
+
