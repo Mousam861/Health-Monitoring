@@ -1,13 +1,10 @@
 function calculate(){
-    //Need to determine the constant of some id functions.
+    
       var bmi;
       var result = document.getElementById("result");
-    //The value of the height slider
       var height = parseInt(document.getElementById("height").value);
-    //The value of the weight slider
       var weight = parseInt(document.getElementById("weight").value);
     
-    //The value of height and width should be displayed in the webpage using "textContent".
       document.getElementById("weight-val").textContent = weight + " kg";
       document.getElementById("height-val").textContent = height + " cm";
      
@@ -43,7 +40,7 @@ function calculate(){
           category = "Obese 😱";
           result.style.color = "#ff5e57";
       }
-    //All of the above text is stored in "category".
+   
   
   //Now you have to make arrangements to display the information in the webpage with the help of "textContent"
       document.getElementById("category").textContent = category;

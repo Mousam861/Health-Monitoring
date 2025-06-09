@@ -56,7 +56,7 @@ def predictdia():
         if output == 1:
             pred = "You have Diabetes, please consult a Doctor."
         else:
-            pred = "You don't have Diabetes."
+            pred = "You don't have Diabetes 😀."
             
         return render_template('resultdia.html', prediction_text=pred)
     except Exception as e:
